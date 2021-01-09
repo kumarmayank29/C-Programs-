@@ -103,11 +103,11 @@ cout<<S.isEmpty()<<endl;
 /*Output Obtained was
 
 Stack is Full
-40
+50
+50
 40
 30
-20
-1
+2
 0
 */
 
