@@ -1,4 +1,7 @@
-/The only problem with stack using array is that we have a constraint of size ,we want to remove that constraint so to remove that problem we decide that whenever nextIndex==Capacity  we'll double to the capacity of array  and copy content of old array with size capacity to new array with size (2*capacity) ,update value of capacity to 2*capacity ,Deallocate the old array and finally point data pointer to new array newdata/
+/*The only problem with stack using array is that we have a constraint of size ,we want to remove that constraint so to remove 
+that problem we decide that whenever nextIndex==Capacity  we'll double to the capacity of array  and copy content of old array 
+with size capacity to new array with size (2*capacity) ,update value of capacity to 2*capacity ,Deallocate the old array and finally
+point data pointer to new array newdata*/
 
 #include<climits>  //For using INT_MIN
 #include<iostream>
@@ -41,14 +44,14 @@ void push(T element)
 {
 if(nextIndex==capacity)
 {
-T *newdata=new T[2*capacity];         //Create an array of double size
+T *newdata=new T[2*capacity];                    //Create an array of double size
 for(int i=0;i<capacity;i++)                     //Copy old array of size capacity  elements to new array of size 2*capacity
 {
  newdata[i]=data[i];
  }
  capacity*=2;
- delete[] data;                                          //Deallocate small array
- data=newdata;                                      //Point data pointer from data to newdata array
+ delete[] data;                                  //Deallocate small array
+ data=newdata;                                   //Point data pointer from data to newdata array
 
 }
 /We do not need to have an else here because whatever may be the case insert will keep continuing now on putting else here problem was just the capacity got doubled but new elements could not get added as we made seperate else block so just remove that else block/
