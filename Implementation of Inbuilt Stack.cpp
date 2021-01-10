@@ -23,3 +23,10 @@ int main()
     
     cout<<"Check if Stack is Empty "<<s1.empty();       //Since stack contains element 10 and 20  So it gives false ie 0
     }
+
+/*Output
+
+Topmost Element of Stack 40
+  30
+Size of Stack 2
+Check if Stack is Empty 0  */
