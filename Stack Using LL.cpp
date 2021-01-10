@@ -1,5 +1,6 @@
-
-
+/* Time Complexity For all Operations O(1)
+   Space Complexity =O(n)
+   n is number of operations*/
 
 #include <iostream>
 using namespace std;
@@ -112,4 +113,19 @@ int main() {
     }
 }
 
+/*
+Input (stdin)
+
+6
+1 13
+1 47
+4
+5
+2
+3
+Your Output 
+2
+false
+47
+13*/
 
