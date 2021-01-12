@@ -1,4 +1,4 @@
-//Method 1
+//Method 1  .It has some probelms
 #include<stack>
 bool isBalanced(string exp) 
 {
@@ -96,4 +96,40 @@ bool isBalanced(string exp) {
     {return 1;}
 
 }
+
+
+
+//Method 3 As per question
+#include<stack>
+bool isBalanced(string exp) 
+{
+    // Write your code here
+    stack<char> s;
+    char a;
+    int i=0;
+    while(exp[i]!='\0')
+    {
+        if(exp[i]=='['||exp[i]=='{'||exp[i]=='(')
+        {
+            s.push(exp[i]);
+        }
+        
+        if(s.empty()) 
+            return false;
+        
+        switch(exp[i])
+        {
+            case ')':
+                a=s.top();
+                s.pop() ;   
+                if(a!='(')                    //Compare Scanned element with elememnt present at top of stack if they dont match return false
+                    return false 
+    }
+        i++;
+}
+    if(s.size()==0) //If size=0 then its balanced
+        return 1;
+}
+
+
 
