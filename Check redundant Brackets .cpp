@@ -49,6 +49,6 @@ bool checkRedundantBrackets(string expression) {
     //((a+b)) 
 /* Some important test cases .Note a bracket is said to be redundant if no useful operation is performed within it for example (ab) is redundant return true but (a*b)
 me it is not redundant as it has a useful operation like * .Similarly ((a+b)) has redundant brackets as it could be reduced to (a+b) return true but (a+b) is not redundant 
-so returns false but the code has some problem wrt case (a+b)+((c+d))
+so returns false but the code has some test case (a+b)+((c+d)) also return true as it has redundant brackets
 
 */ 
